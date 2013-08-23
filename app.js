@@ -29,11 +29,13 @@ var app = module.exports = express.createServer();
 // Jade Routes ////////////////////////////////////////////////////////////////////////
 	
 	app.get('/', routes.index);
-    app.get('/fontface', routes.fontface);
+	app.get('/fontface', routes.fontface);
+	app.get('/fontweight', routes.fontweight);
+     	app.get('/shadow', routes.shadow);
 	app.get('/transparency', routes.transparency);
 	app.get('/borders', routes.borders);
-    app.get('/multipleBGs', routes.multipleBGs);
-    app.get('/transforms', routes.transforms);
+    	app.get('/multipleBGs', routes.multipleBGs);
+    	app.get('/transforms', routes.transforms);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
